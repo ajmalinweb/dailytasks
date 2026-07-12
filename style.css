@@ -1,0 +1,495 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(13, 21, 26);
+
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(21, 88, 115);
+
+}
+
+.header-max {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    min-height: 60px;
+    padding: 0.3em 1.3em;
+}
+
+#name {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+img {
+    width: clamp(24px, 4dvh, 40px);
+    height: clamp(24px, 4dvh, 40px);
+    margin-right: 8px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.progress-area {
+    max-width: 1400px;
+    width: 95vw;
+
+
+}
+
+#progress-bar {
+    margin: 0 1em;
+    width: calc(100% - 2em);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+#percentage {
+    color: white;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.progress-track {
+    width: 100vw;
+    height: clamp(0.9rem, 2vw, 2rem);
+    border-radius: 10px;
+    background-color: #e2e8f0;
+    overflow: hidden;
+    border-radius: 0.7em;
+}
+
+#progress-fill {
+    
+    width: 0%;
+    height: 100%;
+    background: rgb(48, 196, 255);
+    transition: width 0.3s ease;
+}
+
+.input-area {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1em;
+    width: 95vw;
+
+}
+
+#input {
+    align-self: center;
+    background-color: rgb(248, 248, 248);
+    width: calc(100% - 2em);
+    height: clamp(3rem, 8vw, 9rem);
+    font-size: 1rem;
+    border-radius: 0.6rem;
+    margin-inline: 0.6em;
+
+}
+
+.input-btn {
+    align-self: center;
+    background-color: #7ce0ff;
+    margin-inline: 1em;
+    width: calc(100% - 2em);
+    border-radius: 0.6rem;
+    height: clamp(3rem, 8vw, 9rem);
+}
+
+.task-lists {
+    max-width: 1400px;
+    width: 95vw;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+.task-rows {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.6em;
+    background-color: #efefef;
+    height: 3em;
+    border-radius: 0.5rem;
+    margin: 0.6em;
+
+}
+
+#templateItem {
+    display: none;
+}
+
+#check-box {
+    width: 1.6em;
+    height: 1.6em;
+    cursor: pointer;
+    vertical-align: middle;
+    accent-color: rgb(23, 77, 6);
+    transition: accent-color 1s ease-in-out;
+}
+
+#check-box:checked+span {
+    text-decoration: line-through 2px;
+
+}
+
+.task-rows:has(#check-box:checked) {
+    opacity: 0.45;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.task-label {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 1em;
+}
+
+.task-text {
+    color: black;
+
+}
+
+
+#delete-btn {
+    border: none;
+    background: none;
+
+}
+
+@media (min-width: 1201px) {
+
+    .app-container {
+        max-width: 1550px;
+    }
+
+    .header {
+        width: 100vw;
+    }
+
+    .header-max {
+        max-width: 1550px;
+        margin: auto;
+    }
+
+    body {
+        background-color: rgb(100, 154, 188);
+    }
+
+    #name {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 2.8em;
+        height: 2.8em;
+    }
+
+    #percentage {
+        font-size: 1.4em;
+    }
+
+    .progress-track {
+        height: clamp(1.1rem, 3vw, 1.6rem);
+    }
+
+    .input-area2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+
+    .input-area {
+        margin-inline: 0.5em;
+        width: 95vw;
+    }
+
+    #input {
+        align-self: center;
+        width: 81.5%;
+        height: clamp(1.2rem, 3.7vw, 4.9rem);
+        font-size: 1.6rem;
+        border-radius: 1rem;
+        margin-inline: 0em 0.3em;
+
+    }
+
+    .input-btn {
+        margin: 0;
+        align-self: center;
+        background-color: #7ce0ff;
+        width: 15%;
+        font-size: 1.1em;
+        border-radius: 0.8rem;
+        height: clamp(1.4rem, 4.1vw, 5.3rem);
+    }
+
+    .task-rows {
+        padding-inline: 1em;
+        height: 4.3em;
+        border-radius: 0.7rem;
+        margin-inline: 1.2em;
+        margin-block: 0.4em;
+
+    }
+
+
+    .task-text {
+        font-size: 1.5em;
+    }
+
+    #check-box {
+        width: 2.1em;
+        height: 2.1em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        background-color: rgb(67, 106, 130);
+    }
+
+    #name {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    img {
+        width: 3em;
+        height: 3em;
+    }
+
+    #percentage {
+        font-size: 1.3em;
+    }
+
+    .progress-track {
+        height: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .input-area2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .input-area {
+        margin-inline: 10px;
+        width: 95vw;
+
+    }
+
+    #input {
+        align-self: center;
+        background-color: rgb(222, 222, 222);
+        width: 80%;
+        height: clamp(1.7rem, 5.2vw, 6.3rem);
+        font-size: 1rem;
+        border-radius: 1rem;
+
+    }
+
+    .input-btn {
+        margin: 0;
+        align-self: center;
+        background-color: #7ce0ff;
+        width: 15%;
+        border-radius: 0.8rem;
+        height: clamp(1.9rem, 5.4vw, 6.5rem);
+    }
+
+    .task-rows {
+        padding-inline: 1em;
+        height: 3.8em;
+        border-radius: 0.7rem;
+        margin-inline: 1.2em;
+        margin-block: 0.45em;
+    }
+
+    .task-text {
+        font-size: 1.4em;
+    }
+
+    #check-box {
+        width: 2.1em;
+        height: 2.1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: rgb(29, 57, 75);
+    }
+
+    #name {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    img {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    #percentage {
+        font-size: 1.25em;
+    }
+
+    .progress-track {
+        height: clamp(1.2em, 2.2vw, 1.6rem);
+    }
+
+
+    .input-area2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 95vw;
+
+    }
+
+    #input {
+        width: calc(100% - 1.2em);
+        height: clamp(4rem, 7vw, 8.1rem);
+        font-size: 1.8rem;
+        border-radius: 0.7rem;
+    }
+
+    .input-btn {
+        border-radius: 0.7rem;
+        height: clamp(4rem, 7vw, 8.1rem);
+        width: calc(100% - 1.4em);
+        font-size: clamp(1.2rem, 2.1vw, 1.8rem);
+    }
+
+    .task-rows {
+        padding-inline: 0.9em;
+        height: 3.8em;
+        border-radius: 0.7rem;
+        margin-inline: 1.1em;
+        margin-block: 0.45em;
+    }
+
+    .task-text {
+        font-size: 1.45em;
+    }
+
+    #check-box {
+        width: 1.7em;
+        height: 1.7em;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: rgb(30, 46, 56);
+    }
+
+    #name {
+        font-size: 1em;
+    }
+
+    img {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    #percentage {
+        font-size: 0.89em;
+    }
+
+    .progress-track {
+        height: clamp(0.9em, 2vw, 1.7rem);
+    }
+
+    .input-area2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+        width: 95vw;
+
+    }
+
+    #input {
+        width: calc(100% - 2em);
+        height: clamp(3rem, 5vw, 6rem);
+        border-radius: 0.7rem;
+    }
+
+    .input-btn {
+        border-radius: 0.7rem;
+        height: clamp(3rem, 5vw, 6rem);
+        width: calc(100% - 1.9em);
+        font-size: 0.95em;
+    }
+
+    .task-rows {
+        padding-inline: 0.9em;
+        height: 3em;
+        border-radius: 0.7rem;
+        margin-inline: 1.1em;
+        margin-block: 0.4em;
+    }
+
+    .task-text {
+        font-size: 1.2em;
+    }
+
+    #check-box {
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    .task-label {
+        align-items: center;
+        gap: 0.5em;
+    }
+
+}
