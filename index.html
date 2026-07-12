@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DailyTasks</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+     <script src="script.js" defer></script>
+</head>
+
+<body>
+     <div class="app-container">
+          <div class="header">
+               <div class="header-max">
+                    <div>
+                         <h2>Daily Tasks</h2>
+                    </div>
+                    <div id="profile">
+                         <img src="asset/user.png" alt="profile">
+                         <label id="name" for="">Ajmal</label>
+                    </div>
+               </div>
+          </div>
+          <div class="progress-area">
+               <h2>Progress bar</h2>
+               <div id="progress-bar">
+                    <div class="progress-track">
+                         <div id="progress-fill"></div>
+                    </div>
+                    <div class="progress-label">
+                         <span id="percentage">0%</span>
+                    </div>
+               </div>
+
+          </div>
+
+          <div class="input-area">
+               <h2>Task Input</h2>
+               <div class="input-area2">
+                    <input id="input" type="text">
+                    <button onclick="addtaskList()" class="input-btn">Add Task</button>
+               </div>
+          </div>
+
+          <div class="task-lists">
+               <h2>Daily Checklist</h2>
+               <ul id="taskList">
+                    <li id="templateItem" class="task-rows">
+                         <label class="task-label">
+                              <input id="check-box" type="checkbox" onchange="checkStatus(this)">
+                              <span class="task-text"></span>
+                         </label>
+                         <button onclick="deletetaskList(this)" id="delete-btn">
+                              <span class="material-symbols-outlined">delete</span>
+                         </button>
+                    </li>
+               </ul>
+          </div>
+     </div>
+</body>
+
+</html>
